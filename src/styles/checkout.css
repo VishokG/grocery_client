@@ -1,0 +1,25 @@
+.checkout-container {
+    margin-top: 30px;
+}
+
+.checkout-wrapper {
+    width: 913px;
+}
+
+.checkout {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+    .checkout-wrapper {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .checkout-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
