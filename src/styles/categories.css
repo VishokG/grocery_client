@@ -1,0 +1,39 @@
+.categories-container {
+
+}
+
+.categories {
+    margin-top: 40px;
+    display: flex;
+    width: 913px;
+}
+
+.category {
+    color: #474747;
+    font-family: Almarai;
+    border: 1px solid rgba(190, 190, 190, 0.50);
+    background: #FFF;
+    box-shadow: 5px 5px 20px 0px rgba(181, 181, 181, 0.20);
+    min-width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .categories {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .categories {
+        flex-wrap: wrap;
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
