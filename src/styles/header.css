@@ -1,0 +1,139 @@
+.top-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-bar {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #000;
+    font-size: 1.2rem;
+    font-family: Almarai;
+    font-weight: 700;
+    margin-right: 30px;
+}
+
+.top-search {
+    width: 500px;
+    height: 45px;
+    border-radius: 15px;
+    border: 1px solid rgba(190, 190, 190, 0.50);
+    background: #FFF;
+    box-shadow: 5px 5px 20px 0px rgba(181, 181, 181, 0.20);
+    padding-left: 15px;
+}
+
+.top-search::-webkit-input-placeholder {
+    color: rgb(164, 164, 164);
+    background: url(/public/assets/searchFilters.svg) no-repeat scroll;
+    background-size: 17.5px;
+    background-position: right;
+    position: relative;
+    right: 15px;
+    padding-left: 15px;
+}
+
+.top-search:-ms-input-placeholder {
+    padding-left: 15px;
+    color: rgb(164, 164, 164);
+    background: url(/public/assets/searchFilters.svg) no-repeat scroll;
+    background-size: 17.5px;
+    background-position: right;
+    position: relative;
+    right: 15px;
+}
+
+.top-search::placeholder {
+    padding-left: 15px;
+    color: rgb(164, 164, 164);
+    background: url(/public/assets/searchFilters.svg) no-repeat scroll;
+    background-size: 17.5px;
+    background-position: right;
+    position: relative;
+    right: 15px;
+}
+
+.side-nav {
+    list-style-type: none;
+    display: flex;
+}
+
+.side-nav li {
+    display: inline-block;
+    margin-left: 20px;
+    /* position: relative; */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.side-nav-icon {
+    height: 30px;
+}
+
+.avatar-icon {
+    width: 37.5px;
+    height: 37.5px;
+}
+
+.notification-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -15px;
+    left: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: lightgreen;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+    .top-bar {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .title {
+        order: 1;
+    }
+
+    .side-nav {
+        order: 2;
+    }
+
+    .top-search {
+        order: 3;
+    }
+
+    .title {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .top-bar {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    
+}
