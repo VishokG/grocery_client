@@ -1,25 +1,25 @@
 import React from 'react';
 import "../styles/productcard.css";
 
-const ProductCard = () => {
+const ProductCard = (props) => {
   return (
     <div className="product-card center_flex">
         <div className="product-img-container center_flex">
-          <img src="https://py-shopping-cart.s3.eu-west-2.amazonaws.com/bananas.jpeg" alt="" className="product-img" />
+          <img src={props.values.img} alt="" className="product-img" />
         </div>
         <div className="product-info">
           <h4 className="product-title">
-            Crispy Pink Lady Apples
+            {props.values.name}
           </h4>
           <p className="product-description">
-            Pink lady apples are the best and you'll see just how crisp it is from the first bite. Give it a try, what can it hurt!
+            {props.values.description.length>50?`${props.values.description.substring(0,50)}...`:props.values.description}
           </p>
           <p className="product-quantity">
-            Only 3 left
+            {props.values.available>10?"Available":`Only ${props.values.available} left`}
           </p>
           <div className="product-bottom-wrapper">
             <p className="product-price">
-              85p
+              {props.values.price}
             </p>
             <div className="product-options">
               <img className="product-opticon" src="./assets/addToCart.svg" alt="" />
