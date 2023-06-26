@@ -10,33 +10,17 @@
     margin-top: 25px;
 }
 
-.checkout-total {
-    width: 913px;
-    display: flex;
-    flex-direction: column;
-    
-}
-
 @media only screen and (max-width: 992px) {
-    .checkout-wrapper, .checkout-total {
+    .checkout-wrapper {
         width: 87%;
-    }
-    
+    } 
 }
 
 @media only screen and (max-width: 768px) {
-    .checkout-items {
+    .checkout, .checkout-items {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-
-    .checkout-total {
-        /* align-items: center; */
-    }
-
-    .total-subitem {
-        width: 300px;
     }
 }

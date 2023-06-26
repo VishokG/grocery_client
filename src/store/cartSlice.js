@@ -6,7 +6,7 @@ import { createSlice } from "@reduxjs/toolkit";
 //     img,
 //     name,
 //     offer: { if exists or else {}
-//         id,
+//         id,img,name
 //         desc,
 //         quantity
 //     }
@@ -14,7 +14,22 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
     name: "cart",
-    initialState: {value: []},
+    initialState: {value: [{
+      id: 431,
+      img: 'https://py-shopping-cart.s3.eu-west-2.amazonaws.com/bananas.jpeg',
+      name: 'Bananas',
+      price: '£2',
+      offer: {
+      id: 432,
+        img: 'https://py-shopping-cart.s3.eu-west-2.amazonaws.com/apples.jpeg',
+        name: 'Crispy Pink Lady Apples',
+        price: '£0.50',
+        prdouct1_quantity: 4,
+        prdouct2_quantity: 1,
+        desc: "Get 1 Apple free for the purchase of 4 bananas"
+        },
+      quantity: 5
+    }]},
     reducers: {
         addItemToCart: (state, action) => {
             const index = state.value.findIndex((obj => obj.id === action.payload.id));
@@ -31,9 +46,13 @@ const cartSlice = createSlice({
             } else {
                 state.value[index].quantity--;
             }
+        },
+        deleteAllUnitsFromCart: (state, action) => {
+            const index = state.value.findIndex((obj => obj.id === action.payload));
+            state.value.splice(index, 1);
         }
     }
 })
 
-export const { addItemToCart, deleteItemFromCart } = cartSlice.actions;
+export const { addItemToCart, deleteItemFromCart, deleteAllUnitsFromCart } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -1,4 +1,4 @@
-.product-card {
+.product-card-container {
     width: 400px;
     height: 200px;
     border-radius: 15px;
@@ -30,7 +30,6 @@
     margin-top: 30px;
     font-size: .82rem;
 }
-
 
 .product-bottom-wrapper {
     margin-top: 20px;
@@ -65,7 +64,7 @@
 }
 
 @media only screen and (max-width: 992px) {
-    .product-card {
+    .product-card-container {
         flex-direction: column;
         margin-right: 25px;
         height: 380px;
@@ -76,8 +75,4 @@
     .product-info {
         padding-right: 20px;
     }
-}
-
-@media only screen and (max-width: 768px) {
-
 }

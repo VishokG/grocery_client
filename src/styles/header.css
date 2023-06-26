@@ -67,7 +67,6 @@
 .side-nav li {
     display: inline-block;
     margin-left: 20px;
-    /* position: relative; */
 }
 
 .icon-container {
@@ -102,10 +101,6 @@
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-
-}
-
 @media only screen and (max-width: 768px) {
     .top-bar {
         flex-wrap: wrap;
@@ -132,8 +127,4 @@
     .top-bar {
         width: 87%;
     }
-}
-
-@media only screen and (max-width: 1200px) {
-    
 }

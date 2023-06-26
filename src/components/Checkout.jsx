@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import "../styles/checkout.css"
 import Item from './Item';
+import Subtotal from './Subtotal';
 
 const Checkout = () => {
 
@@ -17,9 +18,7 @@ const Checkout = () => {
               <div className="checkout-items">
                   {cart.map(item => <Item values={item} />)}
               </div>
-              <div className="checkout-total">
-                
-              </div>
+              <Subtotal />
           </div>
         </div>
     </div>
