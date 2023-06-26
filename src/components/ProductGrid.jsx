@@ -15,6 +15,7 @@ const ProductGrid = () => {
   const getData = async () => {
     const res = await fetch(`https://uxdlyqjm9i.execute-api.eu-west-1.amazonaws.com/s?category=${category}`);
     const jsonData = await res.json();
+    console.log(jsonData);
     setData(filter(search, jsonData));
   }
   function filter(query, array) {
