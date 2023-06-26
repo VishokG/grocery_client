@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRef } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItemToCart, deleteItemFromCart } from '../../store/cartSlice';
 import "../../styles/productcard.css";
@@ -13,7 +13,7 @@ const ProductCard = (props) => {
   const colorClass = available>10?"available-green":`limited-orange`;
 
   const dispatch = useDispatch();
-  const inCart = useRef(false);
+  const [inCart, setInCart] = useState(false);
 
   const handleCart = () => {
     if(inCart.current) {
@@ -21,7 +21,7 @@ const ProductCard = (props) => {
     } else {
       dispatch(addItemToCart({id, img, name, price, available, offer: {}}));
     }
-    inCart.current = !inCart.current;
+    setInCart(!inCart);
   }
 
   return (
@@ -44,7 +44,7 @@ const ProductCard = (props) => {
               {price}
             </p>
             <div className="product-options">
-              <img className="product-opticon" src="./assets/addToCart.svg" alt="" onClick={handleCart}/>
+              <img className="product-opticon" src={`./assets/${inCart?"cart":"addToCart"}.svg`} alt="" onClick={handleCart}/>
               <img className="product-opticon" src="./assets/addToWish.svg" alt="" />
             </div>
           </div>
