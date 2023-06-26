@@ -17,6 +17,7 @@ const ProductGrid = () => {
     console.log(jsonData);
     setData(filter(search, jsonData));
   }
+  
   function filter(query, array) {
     const filteredResults = array.filter((item) =>
       item.name.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase())

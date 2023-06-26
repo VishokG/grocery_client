@@ -29,6 +29,7 @@
 }
 
 .item-info {
+    width: 170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,6 +130,7 @@
     flex-direction: column;
     padding: 0;
     justify-content: center;
+    color: #474747;
 }
 
 .discount-item-title {
