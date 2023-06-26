@@ -11,7 +11,7 @@
 }
 
 .item-wrapper {
-    height: 80px;
+    height: 90px;
     width: 650px;
     display: flex;
     justify-content: space-between;
@@ -95,7 +95,7 @@
     }
 
     .item-availability {
-        padding-top: 10px;
+        margin-top: 10px;
     }
 }
 

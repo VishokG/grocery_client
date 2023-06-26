@@ -3,10 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 // const cartstructure = [
 //     id,
 //     quantity,
+//     stock,
 //     img,
 //     name,
 //     offer: { if exists or else {}
-//         id,img,name
+//         id,
+//         img,
+//         name
 //         desc,
 //         quantity
 //     }
@@ -19,16 +22,17 @@ const cartSlice = createSlice({
       img: 'https://py-shopping-cart.s3.eu-west-2.amazonaws.com/bananas.jpeg',
       name: 'Bananas',
       price: '£2',
+      quantity: 3,
+      available: 9,
       offer: {
       id: 432,
         img: 'https://py-shopping-cart.s3.eu-west-2.amazonaws.com/apples.jpeg',
         name: 'Crispy Pink Lady Apples',
         price: '£0.50',
-        prdouct1_quantity: 4,
-        prdouct2_quantity: 1,
+        product1_quantity_required: 4,
+        product2_quantity: 1,
         desc: "Get 1 Apple free for the purchase of 4 bananas"
         },
-      quantity: 5
     }]},
     reducers: {
         addItemToCart: (state, action) => {

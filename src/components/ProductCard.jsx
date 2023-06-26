@@ -3,10 +3,14 @@ import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItemToCart, deleteItemFromCart } from '../store/cartSlice';
 import "../styles/productcard.css";
+import "../styles/colors.css";
+import "../styles/common.css";
 
 const ProductCard = (props) => {
 
   const {id, img, name, description, available, price} = props.values;
+
+  const colorClass = available>10?"available-green":`limited-orange`;
 
   const dispatch = useDispatch();
   const inCart = useRef(false);
@@ -15,7 +19,7 @@ const ProductCard = (props) => {
     if(inCart.current) {
       dispatch(deleteItemFromCart(id));
     } else {
-      dispatch(addItemToCart({id, img, name, price, offer: {}}));
+      dispatch(addItemToCart({id, img, name, price, available, offer: {}}));
     }
     inCart.current = !inCart.current;
   }
@@ -32,7 +36,7 @@ const ProductCard = (props) => {
           <p className="product-description">
             {description.length>50?`${description.substring(0,50)}...`:props.values.description}
           </p>
-          <p className="product-quantity">
+          <p className={"product-quantity availability "+colorClass}>
             {available>10?"Available":`Only ${available} left`}
           </p>
           <div className="product-bottom-wrapper">

@@ -6,9 +6,7 @@ import Item from './Item';
 import Subtotal from './Subtotal';
 
 const Checkout = () => {
-
   const cart = useSelector(state => state.cart.value);
-  console.log(cart);
 
   return (
     <div className="checkout-container center_flex">
@@ -16,7 +14,7 @@ const Checkout = () => {
           <h3 className="checkout-title">Checkout</h3>
           <div className="checkout">
               <div className="checkout-items">
-                  {cart.map(item => <Item values={item} />)}
+                  {cart.map(item => <Item values={item} key={item.id} />)}
               </div>
               <Subtotal />
           </div>
