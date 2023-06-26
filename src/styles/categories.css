@@ -9,9 +9,6 @@
 }
 
 .category {
-    color: #474747;
-    border: 1px solid rgba(190, 190, 190, 0.50);
-    background: #FFF;
     box-shadow: 5px 5px 20px 0px rgba(181, 181, 181, 0.20);
     min-width: 150px;
     height: 40px;
@@ -19,6 +16,18 @@
     margin-right: 20px;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.c1 {
+    color: #474747;
+    border: 1px solid rgba(190, 190, 190, 0.50);
+    background: #FFF;
+}
+
+.c2 {
+    background: #474747;
+    border: 1px solid rgba(190, 190, 190, 0.50);
+    color: #FFF;
 }
 
 @media only screen and (max-width: 992px) {

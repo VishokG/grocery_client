@@ -8,14 +8,9 @@ import store from "./store/store";
 
 function App() {
   return (
-    <Provider store={store}>
       <div className="App">
         <Header />
-        <Categories />
-        <ProductGrid />
-        {/* <Checkout /> */}
       </div>
-    </Provider>
   );
 }
 

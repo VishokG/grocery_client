@@ -61,6 +61,7 @@
 .product-opticon {
     margin-left: 10px;
     height: 20px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 992px) {

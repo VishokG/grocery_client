@@ -10,7 +10,7 @@ const categorySlice = createSlice({
                 break;
                 case "DRINKS": state.value = "drinks";
                 break;
-                case "FRUITS": state.value = "fruit";
+                case "FRUIT": state.value = "fruit";
                 break;
                 case "BAKERY": state.value = "bakery";
                 break;

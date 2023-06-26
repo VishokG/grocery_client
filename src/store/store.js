@@ -5,7 +5,7 @@ import categoryReducer from "./categorySlice";
 
 export default configureStore({
     reducer: {
-        // cart: cartReducer,
+        cart: cartReducer,
         // wishlist: wishlistReducer,
         category: categoryReducer
     }
