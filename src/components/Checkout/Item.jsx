@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addItemToCart, deleteItemFromCart, deleteAllUnitsFromCart } from '../store/cartSlice';
-import "../styles/item.css";
-import "../styles/colors.css";
-import "../styles/common.css";
+import { addItemToCart, deleteItemFromCart, deleteAllUnitsFromCart } from '../../store/cartSlice';
+import "../../styles/item.css";
+import "../../styles/common/colors.css";
+import "../../styles/common/common.css";
 
 const Item = (props) => {
   const {id, name, img, quantity, available, offer, price} = props.values;

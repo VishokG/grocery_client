@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import "../styles/subtotal.css"
+import "../../styles/subtotal.css"
 
 const Subtotal = () => {
 

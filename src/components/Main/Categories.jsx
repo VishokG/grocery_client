@@ -1,9 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCategory } from "../store/categorySlice";
-import categories from "../utils/constants"
-import "../styles/categories.css";
+import { setCategory } from "../../store/categorySlice";
+import categories from "../../utils/constants"
+import "../../styles/categories.css";
 
 const Categories = () => {
 

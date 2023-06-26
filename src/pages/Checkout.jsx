@@ -1,9 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import Item from '../components/Checkout/Item';
+import Subtotal from '../components/Checkout/Subtotal';
 import "../styles/checkout.css"
-import Item from './Item';
-import Subtotal from './Subtotal';
 
 const Checkout = () => {
   const cart = useSelector(state => state.cart.value);

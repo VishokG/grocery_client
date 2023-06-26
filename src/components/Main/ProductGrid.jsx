@@ -2,9 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import "../styles/productgrid.css";
 import ProductCard from './ProductCard';
+import "../../styles/productgrid.css";
 
 const ProductGrid = () => {
 

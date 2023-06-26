@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import './index.css';
-import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Categories from './components/Categories';
-import ProductGrid from './components/ProductGrid';
-import Checkout from './components/Checkout';
+import Checkout from './pages/Checkout';
 import store from "./store/store";
-import Header from './components/Header';
-import Layout from './components/Layout';
+import Layout from './layout/Layout';
+import Main from './pages/Main';
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <><Categories /><ProductGrid /></>,
+        element: <Main />,
       },
       {
         path: "checkout",

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { setSearchText } from "../store/searchSlice";
 import "../styles/header.css";
-import "../styles/colors.css";
+import "../styles/common/colors.css";
 
 const Header = () => {
 

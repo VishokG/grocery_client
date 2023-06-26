@@ -1,10 +1,10 @@
 import React from 'react';
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addItemToCart, deleteItemFromCart } from '../store/cartSlice';
-import "../styles/productcard.css";
-import "../styles/colors.css";
-import "../styles/common.css";
+import { addItemToCart, deleteItemFromCart } from '../../store/cartSlice';
+import "../../styles/productcard.css";
+import "../../styles/common/colors.css";
+import "../../styles/common/common.css";
 
 const ProductCard = (props) => {
 
