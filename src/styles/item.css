@@ -125,6 +125,7 @@
 }
 
 .discount-item-info {
+    width: 215px;
     flex-direction: column;
     padding: 0;
     justify-content: center;
@@ -144,6 +145,7 @@
 
 @media only screen and (max-width: 768px) {
     .discount-container {
+        padding: 15px;
         width: 100%;
         height: 200px;
         flex-direction: column;
