@@ -8,7 +8,7 @@ import "../../styles/common/common.css";
 const Item = (props) => {
   const {id, name, img, quantity, available, offer, price} = props.values;
 
-  // Quantity of items on offer we get for current number of items added in cart
+  // Quantity of items on offer we get for current number of items of a specific type added in cart
   const offerItemQuantity = Math.floor(quantity/offer.product1_quantity_required);
 
   // If an offer exists on the purchase of the current product, an additional card is rendered at the bottom

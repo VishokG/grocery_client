@@ -22,7 +22,7 @@ const Subtotal = () => {
     //offer is a parameter of each element in the cart; if an offer does not exist for that product, it is {}
     if(cart[i].offer.price !== undefined) {
 
-      // Quantity of items on offer we get for current number of items added in cart
+      // Quantity of items on offer we get for current number of items of a specific type added in cart
       const offerItemQuantity = Math.floor(cart[i].quantity/cart[i].offer.product1_quantity_required);
 
       const discountAmount = priceFromString(cart[i].offer.price)*offerItemQuantity;
