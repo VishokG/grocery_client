@@ -39,7 +39,7 @@ const Item = (props) => {
             </div>
             <div className="item-info">
                 <p className="item-title">{name}</p>
-                <span className="item-code">Product Code: 239JU3C</span>
+                <span className="item-code">Product Code: PID{id}</span>
             </div>
             <div className="item-quantity">
                 <div className="item-count">
@@ -64,9 +64,9 @@ const Item = (props) => {
             <div className={`item-img-container center_flex ${offerItemQuantity > 0?"":" greyscale"}`}>
                 <img className="item-img" src={offer.img} alt="" />
             </div>
-            <div className={`item-info center_flex discount-item-info ${offerItemQuantity > 0?"":" greyscale"}`} >
-                <p className="item-title">{offer.name}</p>
-                <div className="item-availability discount-item-availability"><span className="item-number">{offer.price}&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;{offerItemQuantity}</span></div>
+            <div className={`center_flex discount-item-info ${offerItemQuantity > 0?"":" greyscale"}`} >
+                <p className="discount-item-title">{offer.name}</p>
+                <div className="discount-item-quantity"><span className="item-number">{offer.price}&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;{offerItemQuantity}</span></div>
             </div>
         </div>}
     </div>

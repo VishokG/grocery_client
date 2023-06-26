@@ -11,6 +11,7 @@
 }
 
 .item-wrapper {
+    text-align: center;
     height: 90px;
     width: 650px;
     display: flex;
@@ -30,12 +31,13 @@
 .item-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 0;
     color: #474747;
 }
 
 .item-title {
+    margin-bottom: 8px;
     font-size: .9rem;
     font-weight: 600;
 }
@@ -45,6 +47,7 @@
 }
 
 .item-quantity {
+    width: 90px;
     font-size: .8rem;
     display: flex;
     flex-direction: column;
@@ -60,6 +63,14 @@
     display: flex;
     justify-content: space-between;
     padding: 0 3px;
+}
+
+.item-price {
+    text-align: center;
+    font-size: .925rem;
+    padding-top: 10px;
+    color: var(--text-roman-silver, #5e5e63);
+    width: 40px
 }
 
 .item-opticon {
@@ -114,16 +125,17 @@
 }
 
 .discount-item-info {
+    flex-direction: column;
     padding: 0;
     justify-content: center;
 }
 
-.discount-item-quantity {
-    padding: 15px 0;
+.discount-item-title {
+    margin-bottom: 2px;
 }
 
-.discount-item-availability {
-    padding-top: 10px;
+.discount-item-quantity {
+    
 }
 
 .discount-offer {
