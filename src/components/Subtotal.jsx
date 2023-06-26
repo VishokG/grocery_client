@@ -32,17 +32,16 @@ const Subtotal = () => {
         <table className="subtotal-table">
           <tr className="subtotal-row">
             <td className="subtotal-row-label">Subtotal</td>
-            <td className="subtotal-row-value">£ {totalValue}</td>
+            <td className="subtotal-row-value">£ {totalValue.toFixed(2)}</td>
           </tr>
           <tr className="subtotal-row">
             <td className="subtotal-row-label">Discount</td>
-            <td className="subtotal-row-value">£ {totalDiscount}</td>
+            <td className="subtotal-row-value">£ {totalDiscount.toFixed(2)}</td>
           </tr>
           <tr className="subtotal-row">
             <td className="subtotal-row-label">Total</td>
-            <td className="subtotal-row-value">£ {totalValue-totalDiscount}<button className="subtotal-checkout-submit">
-              Checkout
-            </button></td>
+            <td className="subtotal-row-value">£ {(totalValue-totalDiscount).toFixed(2)}</td>
+            <td className="subtotal-row-button"><button className="subtotal-checkout-submit">Checkout</button></td>
           </tr>
       </table>
     </div>

@@ -56,10 +56,10 @@ const Item = (props) => {
             <div className="discount-description">
                 <span className="discount-offer">OFFER&nbsp;&nbsp;<br></br></span>{offer.desc}
             </div>
-            <div className="item-img-container center_flex">
+            <div className={`item-img-container center_flex ${offerItemQuantity > 0?"":" greyscale"}`}>
                 <img className="item-img" src={offer.img} alt="" />
             </div>
-            <div className="item-info center_flex discount-item-info">
+            <div className={`item-info center_flex discount-item-info ${offerItemQuantity > 0?"":" greyscale"}`} >
                 <p className="item-title">{offer.name}</p>
                 <div className="item-availability discount-item-availability"><span className="item-number">{offer.price}&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;{offerItemQuantity}</span></div>
             </div>
