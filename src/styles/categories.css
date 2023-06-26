@@ -18,13 +18,13 @@
     cursor: pointer;
 }
 
-.c1 {
+.unselected {
     color: #474747;
     border: 1px solid rgba(190, 190, 190, 0.50);
     background: #FFF;
 }
 
-.c2 {
+.selected {
     background: #474747;
     border: 1px solid rgba(190, 190, 190, 0.50);
     color: #FFF;

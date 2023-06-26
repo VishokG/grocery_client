@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//UNIMPLEMENTED FEATURE
 const wishListSlice = createSlice({
     name: "wishList",
     initialState: {value: new Map()},

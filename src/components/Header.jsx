@@ -14,13 +14,18 @@ const Header = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    //Controlled search input
     const handleChange = (e) => {
         setInput(e.target.value);
     }
 
+    //Search text is registered in store
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(setSearchText(input));
+        
+        //Location is used to check which webpage the user is currently viewing;
+        //Navigate is used to redirect to home (All products are listed in homepage) if current webpage is not homepage
         if(location.pathname !== "/") {
             navigate("/");
         }

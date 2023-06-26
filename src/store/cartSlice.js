@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//This initialCart is used to demonstrate how items in the cartSlice and offers are structured
+// and will be used by the React frontend
+//If an offer exists for the product category, the offer parameter gives details of the offer item and 
+//minimum number of original items required
 const intitialCart = [
     {
         id: 642,
@@ -16,6 +20,15 @@ const intitialCart = [
             product2_quantity: 1,
             desc: "Buy 6 cans of Coca-Cola, and get one free"
         }
+    },
+    {
+        id: 435,
+        name: "Juicy Figs",
+        img: "https://py-shopping-cart.s3.eu-west-2.amazonaws.com/figs.png",
+        price: "£2",
+        available: 25,
+        quantity: 2,
+        offer: {}
     },
     {
         id: 532,

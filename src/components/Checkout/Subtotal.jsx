@@ -3,12 +3,13 @@ import { useSelector } from 'react-redux';
 import "../../styles/subtotal.css"
 
 const Subtotal = () => {
-
   const cart = useSelector(state => state.cart.value);
 
+  //Adding up total value of products before discount and the individual discounts separately
   let totalValue = 0;
   let totalDiscount = 0;
 
+  //The price retrieved from API is a string with prefix "£" Eg: "£32.3"; This function removes the prefix and returns the number
   const priceFromString = (str) => {
     return Number(str.split("£")[1]);
   }
@@ -18,7 +19,10 @@ const Subtotal = () => {
     const price = priceFromString(priceString);
     totalValue += price*cart[i].quantity;
 
+    //offer is a parameter of each element in the cart; if an offer does not exist for that product, it is {}
     if(cart[i].offer.price !== undefined) {
+
+      // Quantity of items on offer we get for current number of items added in cart
       const offerItemQuantity = Math.floor(cart[i].quantity/cart[i].offer.product1_quantity_required);
 
       const discountAmount = priceFromString(cart[i].offer.price)*offerItemQuantity;
@@ -27,6 +31,7 @@ const Subtotal = () => {
     }
   }
   
+  // All values are sent with a fixed point notation 2
   return (
     <div className="subtotal-container">
         <table className="subtotal-table">

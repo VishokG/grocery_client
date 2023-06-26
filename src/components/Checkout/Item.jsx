@@ -8,11 +8,15 @@ import "../../styles/common/common.css";
 const Item = (props) => {
   const {id, name, img, quantity, available, offer, price} = props.values;
 
+  // Quantity of items on offer we get for current number of items added in cart
   const offerItemQuantity = Math.floor(quantity/offer.product1_quantity_required);
 
+  // If an offer exists on the purchase of the current product, an additional card is rendered at the bottom
   const offerExists = Object.keys(offer).length === 0?false:true;
+
   const dispatch = useDispatch();
 
+  //Handles addition and deletion of single items of given product category (& deletion of all items of category)
   const handleClick = (num) => {
     if(num === -1) {
       dispatch(deleteItemFromCart(id))
@@ -52,6 +56,7 @@ const Item = (props) => {
             <img className="item-opticon item-opticon-del" src="./assets/cross.svg" alt="" onClick={() => handleClick(0)} />
             </div>
         </div>
+        {/* Code in the bottom renders a card of an attached product based on an offer of the upper product */}
         {offerExists && <div className="discount-container">
             <div className="discount-description">
                 <span className="discount-offer">OFFER&nbsp;&nbsp;<br></br></span>{offer.desc}
@@ -63,10 +68,6 @@ const Item = (props) => {
                 <p className="item-title">{offer.name}</p>
                 <div className="item-availability discount-item-availability"><span className="item-number">{offer.price}&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;{offerItemQuantity}</span></div>
             </div>
-            {/* <div className="item-quantity disc-item-quantity">
-                <div className="item-count">Quantity</div>
-                <div className="item-availability"><span className="item-number">2</span></div>
-            </div> */}
         </div>}
     </div>
 

@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//Used for storing the search text
+//Redux is required as the search bar is not restricted to one page
 const searchSlice = createSlice({
     name: "search",
     initialState: {value: ""},

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//Category slice is used for current category to be used for filtering data retrieved from API
 const categorySlice = createSlice({
     name: "category",
     initialState: {value: "all"},
