@@ -22,6 +22,11 @@
 .top-search {
     width: 500px;
     height: 45px;
+}
+
+.top-search-input {
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
     border: 1px solid rgba(190, 190, 190, 0.50);
     background: #FFF;
@@ -29,7 +34,7 @@
     padding-left: 15px;
 }
 
-.top-search::-webkit-input-placeholder {
+.top-search-input::-webkit-input-placeholder {
     color: rgb(164, 164, 164);
     background: url(/public/assets/searchFilters.svg) no-repeat scroll;
     background-size: 17.5px;
@@ -39,7 +44,7 @@
     padding-left: 15px;
 }
 
-.top-search:-ms-input-placeholder {
+.top-search-input:-ms-input-placeholder {
     padding-left: 15px;
     color: rgb(164, 164, 164);
     background: url(/public/assets/searchFilters.svg) no-repeat scroll;
@@ -49,7 +54,7 @@
     right: 15px;
 }
 
-.top-search::placeholder {
+.top-search-input::placeholder {
     padding-left: 15px;
     color: rgb(164, 164, 164);
     background: url(/public/assets/searchFilters.svg) no-repeat scroll;
