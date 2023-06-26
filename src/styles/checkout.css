@@ -10,10 +10,18 @@
     margin-top: 25px;
 }
 
+.checkout-total {
+    width: 913px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
 @media only screen and (max-width: 992px) {
-    .checkout-wrapper {
+    .checkout-wrapper, .checkout-total {
         width: 87%;
     }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -21,5 +29,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+    }
+
+    .checkout-total {
+        /* align-items: center; */
+    }
+
+    .total-subitem {
+        width: 300px;
     }
 }
