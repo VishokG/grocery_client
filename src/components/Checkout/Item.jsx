@@ -16,19 +16,23 @@ const Item = (props) => {
 
   const dispatch = useDispatch();
 
-  //Handles addition and deletion of single items of given product category (& deletion of all items of category)
-  const handleClick = (num) => {
-    if(num === -1) {
-      dispatch(deleteItemFromCart(id))
-    } else if(num === 1) {
-      if(quantity >= available) {
-        alert("There are no more items left in stock");
-      } else {
-        dispatch(addItemToCart(props.values))
-      }
+  //Deletes one item only when user clicks MINUS button
+  const deleteOneItem = () => {
+    dispatch(deleteItemFromCart(id));
+  }
+
+  //Adds one item only when user clicks PLUS button
+  const addOneItem = () => {
+    if(quantity >= available) {
+      alert("There are no more items left in stock");
     } else {
-      dispatch(deleteAllUnitsFromCart(id));
+      dispatch(addItemToCart(props.values))
     }
+  }
+
+  //Deletes all items when user clicks CROSS button
+  const deleteAllItems = () => {
+    dispatch(deleteAllUnitsFromCart(id));
   }
 
   return (
@@ -43,9 +47,9 @@ const Item = (props) => {
             </div>
             <div className="item-quantity">
                 <div className="item-count">
-                    <img className="item-opticon" src="./assets/minus.svg" alt="" onClick={() => handleClick(-1)} />
+                    <img className="item-opticon" src="./assets/minus.svg" alt="" onClick={deleteOneItem} />
                         <span className="item-number">{quantity}</span>
-                    <img className="item-opticon" src="./assets/plus.svg" alt="" onClick={() => handleClick(1)} />
+                    <img className="item-opticon" src="./assets/plus.svg" alt="" onClick={addOneItem} />
                 </div>
                 {available>10?"":<div className="item-availability availability limited-orange">Only {available} left</div>}
             </div>
@@ -53,7 +57,7 @@ const Item = (props) => {
                 {price}
             </div>
             <div className="delete-item">
-            <img className="item-opticon item-opticon-del" src="./assets/cross.svg" alt="" onClick={() => handleClick(0)} />
+            <img className="item-opticon item-opticon-del" src="./assets/cross.svg" alt="" onClick={deleteAllItems} />
             </div>
         </div>
         {/* Code in the bottom renders a card of an attached product based on an offer of the upper product */}
