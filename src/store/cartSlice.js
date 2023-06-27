@@ -59,7 +59,7 @@ const cartSlice = createSlice({
             const index = state.value.findIndex((obj => obj.id === action.payload.id));
             if(index === -1) {
                 state.value.push({...action.payload, quantity: 1});
-            } else {
+            } else if(state.value[index].quantity < state.value[index].available){
                 state.value[index].quantity++;
             }
         },
