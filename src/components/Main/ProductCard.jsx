@@ -16,7 +16,7 @@ const ProductCard = (props) => {
   const [inCart, setInCart] = useState(false);
 
   const handleCart = () => {
-    if(inCart.current) {
+    if(inCart) {
       dispatch(deleteItemFromCart(id));
     } else {
       dispatch(addItemToCart({id, img, name, price, available, offer: {}}));
